@@ -14,6 +14,13 @@ const Navbar = () => {
             <li onClick={()=>setMenu("about-us")} className={menu==="about-us"?"active":""}>About Us</li>
             <li onClick={()=>setMenu("contact-us")} className={menu==="contact-us"?"active":""}>Contact Us</li>
         </ul>
+        <div className='nav-icon'>
+          <div className='nav-cart-icon'>
+            <img src={assets.cart} alt="" />
+            <div className='dot'></div>
+          </div>
+          <button><img src={assets.user} alt="" /></button>
+        </div>
     </div>
   )
 }

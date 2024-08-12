@@ -5,29 +5,15 @@
     justify-content: center;
     gap: 80px;
 }
-  
-.email-container{
-    position: relative;
-    display: inline-block;
+
+.subcribe-content h1{
+    font-weight: 1000;
 }
 
 .email-container input[type="email"] {
     padding: 10px;
     border-radius: 20px;
     border: 1px solid ;
-}
-  
-.email-container button[type="submit"] {
-    padding: 10px;
-    border-radius: 20px;
-    border: 1px solid #00B207;
-    background-color: #00B207;
-    color: #FFFFFF;
-    position: absolute; 
-    top: 0; 
-    right: 0;
-    cursor: pointer; 
-   
 }
 
 .social-icon{
@@ -36,4 +22,34 @@
 
 .social-icon img{
     margin-right: 15px;
+    display: inline;
+}
+
+@media (max-width: 1050px) {
+    .subcribe{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .subcribe{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+
+@media (max-width: 750px) {
+    .subcribe{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+   
+  
 }
