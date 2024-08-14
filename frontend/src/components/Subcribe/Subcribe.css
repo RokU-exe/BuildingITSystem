@@ -1,0 +1,39 @@
+.subcribe{
+    margin: 20px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+  
+.email-container{
+    position: relative;
+    display: inline-block;
+}
+
+.email-container input[type="email"] {
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid ;
+}
+  
+.email-container button[type="submit"] {
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #00B207;
+    background-color: #00B207;
+    color: #FFFFFF;
+    position: absolute; 
+    top: 0; 
+    right: 0;
+    cursor: pointer; 
+   
+}
+
+.social-icon{
+    padding: 10px;
+}
+
+.social-icon img{
+    margin-right: 15px;
+}
