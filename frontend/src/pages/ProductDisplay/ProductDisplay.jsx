@@ -3,10 +3,10 @@ import { assets } from '../../assets/assets'
 
 
 const ProductDisplay = () => {
-    const [toggleState, setToggleState] = React.useState(1);
-    const [counter, setCounter] = React.useState(1);
-    const [isFavorited, setIsFavorited] = React.useState(false)
+   
+    const [isFavorited, setIsFavorited] = React.useState(false);
 
+    const [counter, setCounter] = React.useState(1);    
     const incrementHandler=()=>{
       setCounter((val) => val + 1);
     }
@@ -15,22 +15,45 @@ const ProductDisplay = () => {
 
     }
 
+    const [toggleState, setToggleState] = React.useState(1);
     const toggleTab = (index) => {
       setToggleState(index)
+    }
+
+    const imgs = [
+      {id:0, src: assets.tomato},
+      {id:1, src: assets.lettuce},
+      {id:2, src: assets.spinach},
+      {id:3, src: assets.stockcake},
+    ];
+
+    const[sliderData,setSliderData] = React.useState(imgs[0])
+    const handleClick=(index) =>{
+      console.log(index);
+      const slider=imgs[index];
+      setSliderData(slider);
     }
 
     return (
 
     <section class="py-8 bg-white md:py-16 dark:bg-gray-900 antialiased">
         {/* Picture of Products */}
-      <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0">
-        <div class="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16">
-          <div class="shrink-0 max-w-md lg:max-w-lg mx-auto">
-            <img class="w-full dark:hidden" src={assets.tomato} alt="" />
+      <div class="max-w-screen-xl px-4 mx-1 2xl:px-0">
+        <div class="lg:grid lg:grid-cols-7 lg:gap-4 xl:gap-4">
+          <div class>
+          {
+            imgs.map((data,i) => 
+              <img class={sliderData.id==i?"clicked border-2 border-green-500":""} key={data.id} src={data.src} onClick={()=>handleClick(i)} height="70" width="100" alt="" />
+            )
+          }
+          </div>
+
+          <div class="col-start-2 col-end-5 shrink-0 max-w-md lg:max-w-lg mx-auto">
+            <img class="w-96 h-auto dark:hidden" src={sliderData.src} alt="" />
           </div>
 
         {/* Introduce Product */}
-        <div class="mt-6 sm:mt-8 lg:mt-0">
+        <div class="col-start-5 col-end-8 mt-6 sm:mt-8 lg:mt-0">
           <h1 class="text-xl font-bold text-gray-900 sm:text-4xl dark:text-white ">
             Vietnam Tomato
           </h1>

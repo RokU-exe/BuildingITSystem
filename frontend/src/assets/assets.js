@@ -6,6 +6,9 @@ import tomato from './tomato.jpg';
 import startDullIcon from './star_dull_icon.png';
 import starIcon from './star_icon.png';
 import avatar_comment from './avatar_comment.jpg';
+import lettuce from './lettuce.jpg';
+import spinach from './spinach.jpg';
+import stockcake from './StockCake-Ripe zucchini vegetable_1722253581.jpg';
 
 
 export const assets = {
@@ -16,5 +19,8 @@ export const assets = {
     tomato,
     starIcon,  
     startDullIcon,
-    avatar_comment
+    avatar_comment,
+    lettuce,
+    spinach,
+    stockcake
 }
