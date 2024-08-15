@@ -3,7 +3,6 @@ import { assets } from '../../assets/assets'
 
 
 const ProductDisplay = () => {
-   
     const [isFavorited, setIsFavorited] = React.useState(false);
 
     const [counter, setCounter] = React.useState(1);    
@@ -14,6 +13,7 @@ const ProductDisplay = () => {
       setCounter((val) => (val > 0 ? val - 1 : val));
 
     }
+
 
     const [toggleState, setToggleState] = React.useState(1);
     const toggleTab = (index) => {
@@ -33,6 +33,7 @@ const ProductDisplay = () => {
       const slider=imgs[index];
       setSliderData(slider);
     }
+
 
     return (
 
@@ -54,6 +55,8 @@ const ProductDisplay = () => {
 
         {/* Introduce Product */}
         <div class="col-start-5 col-end-8 mt-6 sm:mt-8 lg:mt-0">
+
+
           <h1 class="text-xl font-bold text-gray-900 sm:text-4xl dark:text-white ">
             Vietnam Tomato
           </h1>
