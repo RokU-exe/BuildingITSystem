@@ -7,6 +7,7 @@ import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
 import Products from './pages/Products/Products'
 import ProductDisplay from './pages/ProductDisplay/ProductDisplay'
 import ShoppingCart from './pages/ShoppingCart/ShoppingCart'
+import OrderHistory from './pages/OrderHistory/OrderHistory'
 import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
           <Route path='/products' element={<Products/>} />
           <Route path='/productdisplay' element={<ProductDisplay/>} />
           <Route path='/shoppingcart' element={<ShoppingCart/>} />
+          <Route path='/orderhistory' element={<OrderHistory/>} />
        </Routes>    
       </div> 
       <Subcribe/>
