@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import './Navbar.css'
 import { assets } from '../../assets/assets';
 import { Link } from 'react-router-dom';
@@ -48,6 +49,7 @@ const Navbar = () => {
           <div className='dot'></div>
         </div>
         <Link to='/profile'><button><img src={assets.user} alt="" /></button></Link>
+        <Link to="/loginsignup"><button><img src={assets.user} alt="" /></button></Link>
       </div>
     </div>
     </>
