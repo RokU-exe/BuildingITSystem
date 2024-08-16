@@ -16,7 +16,7 @@ const Category = ({category, setCategory}) => {
                     return (
                         <div onClick={()=>setCategory(prev=>prev===item.categories_name?"All":item.categories_name)} key={index} className='explore-categories-list'>
                             <div className={category===item.categories_name?"active":""}>
-                                <img src={item.categories_image} alt="" />
+                                <a href="#product-display"><img src={item.categories_image} alt="" /></a>
                                 <p>{item.categories_name}</p>
                             </div>
                         </div>

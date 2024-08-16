@@ -11,6 +11,10 @@ import cart from './Cart.png';
 import user from './user.png';
 import phoneCall from './PhoneCall 1.png';
 
+//logo
+import logo from './plant.png';
+import logoText from './text.png';
+
 //categories
 import bakingNeeds from './bakingneeds.png';
 import breadBakery from './breadbakery.png';
@@ -45,6 +49,8 @@ export const assets = {
     cart,
     user,
     phoneCall,
+    logo,
+    logoText,
 }
 
 export const categories = [
