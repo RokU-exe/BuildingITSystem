@@ -2,6 +2,8 @@ import React from 'react'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import Subcribe from './components/Subcribe/Subcribe'
+import LoginSignup from './pages/LoginSignup/LoginSignup'
+import Register from './pages/Register/Register'
 import Home from './pages/Home/Home'
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
 import Products from './pages/Products/Products'
@@ -14,7 +16,9 @@ const App = () => {
     <>
       <Navbar/>
       <div className='app'>
-       <Routes>
+        <Routes>
+          <Route path='/loginsignup' element={<LoginSignup/>}/>
+          <Route path='/register' element={<Register/>}/>
           <Route path='/' element={<Home/>} />
           <Route path='/shoppingcart/order' element={<PlaceOrder/>} />
           <Route path='/products' element={<Products/>} />
