@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import Subcribe from './components/Subcribe/Subcribe'
 import ProductDisplay from './pages/ProductDisplay/ProductDisplay'
+import ShoppingCart from './pages/ShoppingCart/ShoppingCart'
 import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
@@ -10,9 +11,10 @@ const App = () => {
     <>
       <Navbar/>
       <div className='app'>
-        <Routes>
-          <Route path='/productdisplay' element={<ProductDisplay/>} />
-        </Routes>
+      <Routes>
+        <Route path='/productdisplay' element={<ProductDisplay/>} />
+        <Route path='/shoppingcart' element={<ShoppingCart/>} />
+      </Routes>
       </div> 
       <Subcribe/>
       <Footer/>
