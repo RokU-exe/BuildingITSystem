@@ -36,6 +36,17 @@ import meatImg from './beef.jpg';
 import vetableImg from './bell-pepper.jpg';
 import diabeticImg from './diabetic.jpg';
 
+
+//product display example
+import tomato from './tomato.jpg';
+import startDullIcon from './star_dull_icon.png';
+import starIcon from './star_icon.png';
+import avatar_comment from './avatar_comment.jpg';
+import lettuce from './lettuce.jpg';
+import spinach from './spinach.jpg';
+import stockcake from './StockCake-Ripe zucchini vegetable_1722253581.jpg';
+
+
 export const assets = {
     instagramIcon,
     facebookIcon,
@@ -51,6 +62,13 @@ export const assets = {
     phoneCall,
     logo,
     logoText,
+    tomato,
+    starIcon,  
+    startDullIcon,
+    avatar_comment,
+    lettuce,
+    spinach,
+    stockcake
 }
 
 export const categories = [
@@ -174,3 +192,4 @@ export const product_list = [
 
 
 ]
+
