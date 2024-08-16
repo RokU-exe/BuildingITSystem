@@ -5,6 +5,7 @@
     padding: 0;
     overflow: hidden;
     background-color: #191919;
+    font-family: Arial, sans-serif;
 }   
 
 .navbar h1{
@@ -36,3 +37,26 @@
     border-bottom: 2px solid #1C7820;
 }
 
+.nav-login-cart{
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.nav-login-cart button{
+    width: 110px;
+    height: 50px;
+    outline: none;
+    border: 1px solid grey;
+    border-radius: 75px;
+    margin-right: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 700;
+    background: #00b207;
+    cursor: pointer;
+}
+
+.nav-login-cart button:active{
+    background: #1C7820;
+}
