@@ -306,7 +306,7 @@ const ProductDisplay = () => {
               </div>
             </div>
 
-                {/* Additional Information */}
+              {/* Additional Information */}
             <div className={toggleState === 2 ? "content active-content p-7 h-1 mb-3 lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16":"content active-content absolute invisible p-7 h-auto mb-20 lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16"}>
               <div>
                 <div class='flex my-5'><p class="text-black font-bold mr-2">Weight: </p > 
@@ -358,6 +358,7 @@ const ProductDisplay = () => {
                 </div>
               </div>
             </div>
+
               {/* Customer Feedback */}
             <div className={toggleState === 3 ?"content active-content p-7 h-auto mx-auto my-10 px-4 md:px-6 max-w-2xl gap-12 lg:gap-8 xl:gap-16":"content active-content invisible p-7 h-auto mx-auto my-10 px-4 md:px-6 max-w-2xl gap-12 lg:gap-8 xl:gap-16"}>
               <div class="flex gap-4">
@@ -731,4 +732,3 @@ const ProductDisplay = () => {
 }
 
 export default ProductDisplay
-
