@@ -13,7 +13,7 @@ const Navbar = () => {
       </div>
       <div class="relative flex h-10 w-full min-w-[200px] max-w-[24rem]">
             <button
-            class="!absolute right-1 top-1 z-10 select-none rounded bg-green-500 py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none peer-placeholder-shown:pointer-events-none peer-placeholder-shown:bg-blue-gray-500 peer-placeholder-shown:opacity-50 peer-placeholder-shown:shadow-none"
+            class="!absolute right-1 top-1 z-10 select-none rounded bg-[#00b207] hover:bg-green-300 text-white focus:ring-4 focus:ring-green-300 py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none peer-placeholder-shown:pointer-events-none peer-placeholder-shown:bg-blue-gray-500 peer-placeholder-shown:opacity-50 peer-placeholder-shown:shadow-none"
             type="button"
             data-ripple-light="true">                
               Search
@@ -39,8 +39,6 @@ const Navbar = () => {
       <ul className='nav-menu'>
         <li onClick={()=>setMenu("home")} className={menu==="home"?"active":""}><Link to='/'>Home</Link></li>
         <li onClick={()=>setMenu("products")} className={menu==="products"?"active":""}><Link to='/products'>Products</Link></li>
-        <li onClick={()=>setMenu("pages")} className={menu==="pages"?"active":""}>Pages</li>
-        <li onClick={()=>setMenu("blog")} className={menu==="blog"?"active":""}>Blog</li>
         <li onClick={()=>setMenu("about-us")} className={menu==="about-us"?"active":""}>About Us</li>
         <li onClick={()=>setMenu("contact-us")} className={menu==="contact-us"?"active":""}>Contact Us</li>
       </ul>
@@ -49,7 +47,7 @@ const Navbar = () => {
           <Link to='/shoppingcart' onClick={()=>setMenu("order")} className={menu==="order"?"active":""}><img src={assets.cart} alt="" /></Link>
           <div className='dot'></div>
         </div>
-        <button><img src={assets.user} alt="" /></button>
+        <Link to='/profile'><button><img src={assets.user} alt="" /></button></Link>
       </div>
     </div>
     </>

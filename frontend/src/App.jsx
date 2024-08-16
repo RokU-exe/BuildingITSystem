@@ -8,6 +8,7 @@ import Products from './pages/Products/Products'
 import ProductDisplay from './pages/ProductDisplay/ProductDisplay'
 import ShoppingCart from './pages/ShoppingCart/ShoppingCart'
 import { Route, Routes } from 'react-router-dom'
+import Profile from './pages/Profile/Profile'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path='/products' element={<Products/>} />
           <Route path='/productdisplay' element={<ProductDisplay/>} />
           <Route path='/shoppingcart' element={<ShoppingCart/>} />
+          <Route path='/profile' element={<Profile/>} />
        </Routes>    
       </div> 
       <Subcribe/>
