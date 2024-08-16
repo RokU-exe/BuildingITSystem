@@ -1,3 +1,27 @@
+.navbar1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.phone-number{
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.phone-number img{
+    width: 20px;
+}
+
+
+
+.logo{
+    width: 4%;
+    margin-left: 30px;
+}
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -6,11 +30,6 @@
     overflow: hidden;
     background-color: #191919;
 }   
-
-.navbar h1{
-    margin: 20px;
-    color: #fff;
-}
 
 .nav-menu{
     display: flex;
@@ -58,6 +77,10 @@
 .nav-cart-icon{
     position: relative;
 }
+
+.nav-cart-icon:hover{
+    padding-top: 1px;
+    border-bottom: 2px solid #1C7820;}
 
 .nav-cart-icon .dot{
     position: absolute;

@@ -1,19 +1,15 @@
 .subcribe{
-    margin: 20px 20px;
+    background-color: #F7F7F7;
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 80px;
+    padding: 40px;
+    margin-top: 20px;
 }
 
 .subcribe-content h1{
     font-weight: 1000;
-}
-
-.email-container input[type="email"] {
-    padding: 10px;
-    border-radius: 20px;
-    border: 1px solid ;
 }
 
 .social-icon{

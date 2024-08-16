@@ -7,7 +7,6 @@
     gap: 20px;
     padding: 20px 8vw;
     padding-top: 80px;
-    margin-top: 50px;
 }
 .footer-content{
     width: 100%;
@@ -54,7 +53,7 @@
         flex-direction: column;
         gap: 35px;
     }
-    
+
     .footer-copyright{
         text-align: center;
     }
