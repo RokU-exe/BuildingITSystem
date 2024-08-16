@@ -46,7 +46,7 @@ const Navbar = () => {
       </ul>
       <div className='nav-icon'>
         <div className='nav-cart-icon'>
-          <Link to='/order' onClick={()=>setMenu("order")} className={menu==="order"?"active":""}><img src={assets.cart} alt="" /></Link>
+          <Link to='/shoppingcart' onClick={()=>setMenu("order")} className={menu==="order"?"active":""}><img src={assets.cart} alt="" /></Link>
           <div className='dot'></div>
         </div>
         <button><img src={assets.user} alt="" /></button>
