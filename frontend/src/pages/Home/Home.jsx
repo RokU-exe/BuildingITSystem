@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import './Home.css'
 import Header from '../../components/Header/Header'
 import Category from '../../components/Category/Category'
 import ProductDisplay from '../../components/ProductDisplay/ProductDisplay'
