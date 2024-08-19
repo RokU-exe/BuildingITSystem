@@ -2,9 +2,9 @@ import React from 'react'
 import { assets } from '../../assets/assets'
 import { Link } from 'react-router-dom'
 
-
 const OrderHistory = () => {
   return (
+
     <div class="grid grid-cols-2 rounded-lg mt-4 border bg-card text-card-foreground shadow-sm" data-v0-t="card">
         <aside className="w-64 p-4 bg-white border-r">
         <nav className="space-y-4">
