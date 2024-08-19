@@ -50,6 +50,7 @@ const Navbar = () => {
           <div className='dot'></div>
         </div>
         <Link to="/loginsignup"><button><img src={assets.user} alt="" /></button></Link>
+
       </div>
     </div>
     </>
