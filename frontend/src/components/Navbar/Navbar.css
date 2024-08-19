@@ -1,0 +1,167 @@
+.navbar1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.phone-number{
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.phone-number img{
+    width: 20px;
+}
+
+
+
+.logo{
+    width: 4%;
+    margin-left: 30px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #191919;
+    font-family: Arial, sans-serif;
+}   
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.nav-menu li{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav-menu .active{
+    padding-top: 1px;
+    border-bottom: 2px solid #1C7820;
+}
+
+.nav-icon{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 8%;
+    margin-right: 40px;
+
+}
+
+.navbar button{
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar button:hover{
+    background-color: #1C7820;
+    border-radius: 50px;
+}
+
+.nav-cart-icon{
+    position: relative;
+}
+
+.nav-cart-icon:hover{
+    padding-top: 1px;
+    border-bottom: 2px solid #1C7820;}
+
+.nav-cart-icon .dot{
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: #1C7820;
+    border-radius: 5px;
+    top: 0px;
+    right: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    
+    .navbar h1 {
+        margin: 20px;
+    }
+    
+    .nav-menu {
+        gap: 20px;
+        padding: 0 20px;
+    }
+    
+    .nav-menu li {
+        padding: 14px 16px;
+        font-size: 16px;
+    }
+    
+    .nav-icon {
+        width: 8%;
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: row;
+        padding: 0 10px;
+    }
+    
+    .navbar h1 {
+        margin: 15px;
+    }
+    
+    .nav-menu {
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .nav-menu li {
+        padding: 12px;
+        font-size: 15px;
+    }
+    
+    .nav-icon {
+        width: auto;
+        margin-right: 20px;
+    }
+}
+    
+@media (max-width: 750px) {
+    
+    .navbar h1 {
+        margin: 10px 0;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+    
+    .nav-icon {
+        width: 20%;
+        margin: 10px 0;
+    }
+    
+    .nav-cart-icon {
+        margin-left: 0;
+    }
+}
