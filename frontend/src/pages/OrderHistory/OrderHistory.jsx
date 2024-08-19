@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom'
 const OrderHistory = () => {
   return (
 
-    <div class="grid grid-cols-2 rounded-lg mt-4 border bg-card text-card-foreground shadow-sm" data-v0-t="card">
-        <aside className="w-64 p-4 bg-white border-r">
+    <div class="grid grid-cols-8 mt-4  bg-card text-card-foreground shadow-sm" data-v0-t="card">
+        {/* Navigation Side bar */}
+        <aside className="w-64 p-4 col-start-1 bg-white">
         <nav className="space-y-4">
           <h2 className="text-lg font-bold">Navigation</h2>
           <ul className="space-y-2">
@@ -53,7 +54,8 @@ const OrderHistory = () => {
           </ul>
         </nav>
         </aside>
-        <div>
+        {/* Order History */}
+        <div class="col-start-3 col-end-9">
             <div class="flex flex-col space-y-1.5 p-6 px-7">
                 <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">Order History</h3>
                 <p class="text-sm text-muted-foreground">View your past orders.</p>
