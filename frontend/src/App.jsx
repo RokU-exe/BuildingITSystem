@@ -10,6 +10,7 @@ import Products from './pages/Products/Products'
 import ProductDisplay from './pages/ProductDisplay/ProductDisplay'
 import ShoppingCart from './pages/ShoppingCart/ShoppingCart'
 import OrderHistory from './pages/OrderHistory/OrderHistory'
+import OrderDetails from './pages/OrderDetails/OrderDetails'
 import Profile from './pages/Profile/Profile'
 import { Route, Routes } from 'react-router-dom'
 
@@ -29,6 +30,7 @@ const App = () => {
           <Route path='/shoppingcart' element={<ShoppingCart/>} />
           <Route path='/profile' element={<Profile/>} />
           <Route path='/orderhistory' element={<OrderHistory/>} />
+          <Route path='/orderdetails' element={<OrderDetails/>} />
        </Routes>    
       </div> 
       <Subcribe/>
