@@ -7,7 +7,6 @@ const OrderHistory = () => {
     <div class="grid grid-cols-8 mt-4  bg-card text-card-foreground shadow-sm" data-v0-t="card">
         {/* Navigation Side bar */}
         <aside className="w-64 p-4 col-start-1 bg-white">
-
         <nav className="space-y-4">
           <h2 className="text-lg font-bold">Navigation</h2>
           <ul className="space-y-2">
