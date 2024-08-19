@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Profile = () => {
   return (
+    //customer navigation bar
     <div>
         <div>
         <div className="flex min-h-screen bg-gray-50">
@@ -55,6 +56,7 @@ const Profile = () => {
           </ul>
         </nav>
       </aside>
+      {/* customer profile */}
       <main className="flex-1 p-8 space-y-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div className="flex flex-col items-center p-4 border-2 rounded-lg ">
@@ -79,6 +81,7 @@ const Profile = () => {
                 <div variant="outline">Edit Address</div>
             </div>
         </div>
+        {/* order history */}
         <div className='border-2 rounded-lg'>
           <h3 className=" m-2 text-xl font-bold">Recent Order History</h3>
           <div>
@@ -97,8 +100,8 @@ const Profile = () => {
                 <div>8 Sep, 2020</div>
                 <div>$135.00 (5 Products)</div>
                 <div>Processing</div>
-                <div className="text-green-600">
-                  <a href="#">View Details</a>
+                <div className="text-green-600 hover:text-green-400">
+                  <Link to='/orderdetails'>View Details</Link>
                 </div>
               </div>
               <div className='pb-4 grid grid-cols-5'>
@@ -106,8 +109,8 @@ const Profile = () => {
                 <div>24 May, 2020</div>
                 <div>$25.00 (1 Product)</div>
                 <div>On the way</div>
-                <div className="text-green-600">
-                  <a href="#">View Details</a>
+                <div className="text-green-600 hover:text-green-400">
+                  <Link to='/orderdetails'>View Details</Link>
                 </div>
               </div>
               <div className='pb-4 grid grid-cols-5'>
@@ -115,8 +118,8 @@ const Profile = () => {
                 <div>22 Oct, 2020</div>
                 <div>$250.00 (4 Products)</div>
                 <div>Completed</div>
-                <div className=" text-green-600">
-                  <a href="#">View Details</a>
+                <div className=" text-green-600 hover:text-green-400">
+                  <Link to='/orderdetails'>View Details</Link>
                 </div>
               </div>
               <div className='pb-4 grid grid-cols-5'>
@@ -124,8 +127,8 @@ const Profile = () => {
                 <div>1 Feb, 2020</div>
                 <div>$35.00 (1 Product)</div>
                 <div>Completed</div>
-                <div className=" text-green-600">
-                  <a href="#">View Details</a>
+                <div className=" text-green-600 hover:text-green-400">
+                  <Link to='/orderdetails'>View Details</Link>
                 </div>
               </div>
               <div className='pb-4 grid grid-cols-5'>
@@ -133,8 +136,8 @@ const Profile = () => {
                 <div>21 Sep, 2020</div>
                 <div>$678.00 (13 Products)</div>
                 <div>Completed</div>
-                <div className=" text-green-600">
-                  <a href="#">View Details</a>
+                <div className=" text-green-600 hover:text-green-400">
+                  <Link to='/orderdetails'>View Details</Link>
                 </div>
               </div>
               <div className='pb-4 grid grid-cols-5'>
@@ -142,8 +145,8 @@ const Profile = () => {
                 <div>22 Oct, 2020</div>
                 <div>$345.00 (7 Products)</div>
                 <div>Completed</div>
-                <div className=" text-green-600">
-                  <a href="#">View Details</a>
+                <div className=" text-green-600 hover:text-green-400">
+                  <Link to='/orderdetails'>View Details</Link>
                 </div>
               </div>
             </div>

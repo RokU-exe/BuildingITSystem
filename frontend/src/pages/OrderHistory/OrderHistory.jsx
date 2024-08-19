@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const OrderHistory = () => {
   return (
-
+    //customer navigation bar
     <div class="grid grid-cols-2 rounded-lg mt-4 border bg-card text-card-foreground shadow-sm" data-v0-t="card">
         <aside className="w-64 p-4 bg-white border-r">
         <nav className="space-y-4">
@@ -53,6 +53,7 @@ const OrderHistory = () => {
           </ul>
         </nav>
         </aside>
+        {/* order history */}
         <div>
             <div class="flex flex-col space-y-1.5 p-6 px-7">
                 <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">Order History</h3>
@@ -95,9 +96,11 @@ const OrderHistory = () => {
                         </div>
                         </td>
                         <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-left">
-                        <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background bg-white text-black hover:bg-green-300 hover:text-green-900  duration-300 ease-in-out transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">
-                            View Details
-                        </button>
+                        <Link to='/orderdetails'>
+                            <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background bg-white text-black hover:bg-green-300 hover:text-green-900  duration-300 ease-in-out transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">
+                                View Details
+                            </button>
+                        </Link>
                         </td>
                     </tr>
                     <tr class="border-b duration-300 ease-in-out transition-colors hover:bg-gray-100 data-[state=selected]:bg-muted">
@@ -117,9 +120,11 @@ const OrderHistory = () => {
                         </div>
                         </td>
                         <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-left">
-                        <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background bg-white text-black hover:bg-green-300 hover:text-green-900  duration-300 ease-in-out transition-colors  transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">
-                            View Details
-                        </button>
+                        <Link to='/orderdetails'>
+                            <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background bg-white text-black hover:bg-green-300 hover:text-green-900  duration-300 ease-in-out transition-colors  transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">
+                                View Details
+                            </button>
+                        </Link>
                         </td>
                     </tr>
                     <tr class="border-b duration-300 ease-in-out transition-colors hover:bg-gray-100 data-[state=selected]:bg-muted">
@@ -139,9 +144,11 @@ const OrderHistory = () => {
                         </div>
                         </td>
                         <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-left">
-                        <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background bg-white text-black hover:bg-green-300 hover:text-green-900  duration-300 ease-in-out transition-colors  transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">
-                            View Details
-                        </button>
+                        <Link to='/orderdetails'>
+                            <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background bg-white text-black hover:bg-green-300 hover:text-green-900  duration-300 ease-in-out transition-colors  transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">
+                                View Details
+                            </button>
+                        </Link>
                         </td>
                     </tr>
                     <tr class="border-b duration-300 ease-in-out transition-colors hover:bg-gray-100 data-[state=selected]:bg-muted">
@@ -161,9 +168,11 @@ const OrderHistory = () => {
                         </div>
                         </td>
                         <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-left">
-                        <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background bg-white text-black hover:bg-green-300 hover:text-green-900  duration-300 ease-in-out transition-colors  transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">
-                            View Details
-                        </button>
+                        <Link to='/orderdetails'>
+                            <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background bg-white text-black hover:bg-green-300 hover:text-green-900  duration-300 ease-in-out transition-colors  transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">
+                                View Details
+                            </button>
+                        </Link>
                         </td>
                     </tr>
                     <tr class="border-b transition-colors hover:bg-gray-100 data-[state=selected]:bg-muted">
@@ -183,9 +192,11 @@ const OrderHistory = () => {
                         </div>
                         </td>
                         <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-left">
-                        <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background bg-white text-black hover:bg-green-300 hover:text-green-900  duration-300 ease-in-out transition-colors  transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">
-                            View Details
-                        </button>
+                        <Link to='/orderdetails'>
+                            <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background bg-white text-black hover:bg-green-300 hover:text-green-900  duration-300 ease-in-out transition-colors  transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">
+                                View Details
+                            </button>
+                        </Link>
                         </td>
                     </tr>
                     </tbody>
