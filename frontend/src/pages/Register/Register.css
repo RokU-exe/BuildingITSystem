@@ -11,11 +11,7 @@
     border-radius: 10px ;
     background: rgb(245, 245, 245);
     margin: auto;
-    outline-width: 100px;
-    outline-color: #1C7820;
-    border: #ff0000;
-    border-width: 100px;
-    border-color: #ff0000;
+    border: 5px;
     padding: 20px 60px;
 }
 .register-container h1 {

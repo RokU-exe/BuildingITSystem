@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer'
 import Subcribe from './components/Subcribe/Subcribe'
 import LoginSignup from './pages/LoginSignup/LoginSignup'
 import Register from './pages/Register/Register'
+import Aboutus from './pages/Aboutus/Aboutus'
 import { Route, Routes} from 'react-router-dom'
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
         <Routes>
           <Route path='/loginsignup' element={<LoginSignup/>}/>
           <Route path='/register' element={<Register/>}/>
+          <Route path="/aboutus" element={<Aboutus />} />
         </Routes>
       </div>
 
