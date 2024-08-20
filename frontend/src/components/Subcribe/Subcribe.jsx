@@ -11,7 +11,7 @@ const Subcribe = () => {
 
         <div class="relative flex h-10 w-full min-w-[200px] max-w-[24rem]">
             <button
-            class="!absolute right-1 top-1 z-10 select-none rounded-full bg-green-500 py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none peer-placeholder-shown:pointer-events-none peer-placeholder-shown:bg-blue-gray-500 peer-placeholder-shown:opacity-50 peer-placeholder-shown:shadow-none"
+            class="!absolute right-1 top-1 z-10 select-none rounded-full bg-[#00b207] hover:bg-green-300 focus:ring-4 focus:ring-green-300 py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none peer-placeholder-shown:pointer-events-none peer-placeholder-shown:bg-blue-gray-500 peer-placeholder-shown:opacity-50 peer-placeholder-shown:shadow-none"
             type="button"
             data-ripple-light="true">                
                 Subscribe

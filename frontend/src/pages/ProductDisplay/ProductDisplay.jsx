@@ -171,13 +171,13 @@ const ProductDisplay = () => {
           <div class="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8">
           <div class="w-40 mx-auto border-gray-300 rounded-full border-2 px-2 py-1">
                 <div class="relative flex items-center max-w-[8rem]">                  
-                    <button type="button" id="decrement-button" onClick={decrementHandler}  class="bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 border border-gray-300 rounded-full px-2.5 py-2.5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
+                    <button type="button" id="decrement-button" onClick={decrementHandler}  class="bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 border border-gray-300 rounded-full px-2.5 py-2.5 transition-colors duration-300 ease-in-out focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
                         <svg class="w-3 h-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"/>
                         </svg>
                     </button>
                     <span id="quantity-input" class="bg-white rounded-full border-white h-11 text-center text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-10 px py-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>{counter}</span>
-                    <button type="button" id="increment-button" onClick={incrementHandler} class="bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 border border-gray-300 rounded-full px-2.5 py-2.5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
+                    <button type="button" id="increment-button" onClick={incrementHandler} class="bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 border border-gray-300 rounded-full px-2.5 py-2.5 transition-colors duration-300 ease-in-out focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
                         <svg class="w-3 h-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
                         </svg>
@@ -188,7 +188,7 @@ const ProductDisplay = () => {
           <a
               href="#"
               title=""
-              class="mt-0 sm:mt-0 bg-[#00b207] hover:bg-green-300 text-white focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-40 py-4 dark:bg-primary-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800 flex items-center justify-center"
+              class="mt-0 sm:mt-0 bg-[#00b207] hover:bg-green-300 text-white focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-40 py-4 transition-colors duration-300 ease-in-out dark:bg-primary-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800 flex items-center justify-center"
               role="button"
             >
               <p class= "w-max ">Add To Cart</p> 
@@ -217,7 +217,7 @@ const ProductDisplay = () => {
               class="flex items-center justify-center py-3.5 px-3.5  text-white  bg-green-900 rounded-full  hover:bg-green-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-green-100 dark:focus:ring-green-700 dark:bg-green-800 dark:text-green-400 dark:border-green-600 dark:hover:text-white dark:hover:bg-green-700"
               role="button"
               onClick={()=> setIsFavorited(!isFavorited)}
-              className={`flex items-center justify-center py-3.5 px-3.5 rounded-full ${isFavorited ? "bg-green-900 text-white hover:bg-green-600" : "bg-green-100 text-green-900 hover:bg-green-200"}`}
+              className={`flex items-center justify-center py-3.5 px-3.5 rounded-full ${isFavorited ? "bg-green-900 text-white hover:bg-green-600 transition-colors duration-300 ease-in-out" : "bg-green-100 text-green-900 hover:bg-green-200 transition-colors duration-300 ease-in-out"}`}
             >
               <svg
                 class="w-5 h-5"

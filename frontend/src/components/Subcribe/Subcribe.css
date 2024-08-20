@@ -2,7 +2,7 @@
     background-color: #F7F7F7;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 80px;
     padding: 40px;
     margin-top: 20px;
@@ -13,12 +13,13 @@
 }
 
 .social-icon{
+    display: flex;
     padding: 10px;
 }
 
-.social-icon img{
+.social-icon svg{
     margin-right: 15px;
-    display: inline;
+    
 }
 
 @media (max-width: 1050px) {
