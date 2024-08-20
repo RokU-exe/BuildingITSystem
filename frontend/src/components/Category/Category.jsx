@@ -14,7 +14,7 @@ const Category = ({category, setCategory}) => {
             {
                 categories.map((item,index)=>{
                     return (
-                        <div onClick={()=>setCategory(prev=>prev===item.categories_name?"All":item.categories_name)} key={index} className='explore-categories-list duration-300 ease-in-out hover:shadow-2xl'>
+                        <div onClick={()=>setCategory(prev=>prev===item.categories_name?"All":item.categories_name)} key={index} className='font-sans text-xs font-semibold explore-categories-list duration-300 ease-in-out hover:shadow-2xl'>
                             <div className={category===item.categories_name?"active":""}>
                                 <a href="#product-display"><img src={item.categories_image} alt="" /></a>
                                 <p>{item.categories_name}</p>
@@ -24,7 +24,7 @@ const Category = ({category, setCategory}) => {
                 })
             }
         </div>
-        <hr />
+        <hr/>
     </div> 
   )
 }

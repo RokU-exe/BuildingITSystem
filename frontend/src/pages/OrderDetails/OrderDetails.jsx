@@ -8,7 +8,7 @@ const OrderDetails = () => {
     <div class="grid grid-cols-8">
         {/* Navigation bar */}
         <div class="col-start-1 col-end-2">
-            <aside className="w-64 p-4 col-start-1 bg-white">
+            <aside className="w-64 p-4 mt-4 col-start-1 bg-white">
             <nav className="space-y-4">
             <h2 className="text-lg font-bold">Navigation</h2>
             <ul className="space-y-2">
