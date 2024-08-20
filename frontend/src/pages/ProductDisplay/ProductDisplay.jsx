@@ -191,7 +191,7 @@ const ProductDisplay = () => {
           <a
               href="#"
               title=""
-              class="mt-0 sm:mt-0 bg-[#00b207] hover:bg-green-300 text-white focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-40 py-4 transition-colors duration-300 ease-in-out dark:bg-primary-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800 flex items-center justify-center"
+              class="mt-0 sm:mt-0 g-[#00b207] hover:shadow-lg hover:shadow-green-500/40  text-white transition-all duration-200 ease-linear text-center align-middle font-sans uppercase shadow-md  bg-[#00b207] focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-40 py-4 dark:bg-primary-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800 flex items-center justify-center"
               role="button"
             >
               <p class= "w-max ">Add To Cart</p> 

@@ -8,7 +8,7 @@ const Header = () => {
         <div className='header-banner'>
           <h2>Fresh & Healthy</h2>
           <h2>Organic Food</h2>
-          <button>Shop now</button>
+          <button className='bg-[#00b207] hover:shadow-lg hover:shadow-green-500/40  text-white transition-all duration-200 ease-linear py-2 px-4 text-center align-middle font-sans text-xs font-bold shadow-md '>Shop now</button>
         </div>
     </div>
     <div className='header-febox'>
