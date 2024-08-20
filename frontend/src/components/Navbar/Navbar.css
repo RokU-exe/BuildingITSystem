@@ -59,10 +59,8 @@
 .nav-icon{
     display: flex;
     align-items: center;
-    gap: 40px;
-    width: 8%;
-    margin-right: 40px;
-
+    gap: 10 px;
+    margin-left: 40px;
 }
 
 .navbar button{

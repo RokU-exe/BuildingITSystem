@@ -8,19 +8,21 @@ const Navbar = () => {
     <>
     <div className="navbar1">
       <div className="logo">
-        <img src={assets.logo} alt="" />
-        <img src={assets.logoText} alt="" />
+        <Link to='/'>
+          <img src={assets.logo} alt="" />
+          <img src={assets.logoText} alt="" />
+          </Link>
       </div>
       <div class="relative flex h-10 w-full min-w-[200px] max-w-[24rem]">
             <button
-            class="!absolute right-1 top-1 z-10 select-none rounded bg-green-500 py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none peer-placeholder-shown:pointer-events-none peer-placeholder-shown:bg-blue-gray-500 peer-placeholder-shown:opacity-50 peer-placeholder-shown:shadow-none"
+            class="!absolute right-1 top-1 z-10 select-none rounded-full bg-[#00b207] py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none peer-placeholder-shown:pointer-events-none peer-placeholder-shown:bg-blue-gray-500 peer-placeholder-shown:opacity-50 peer-placeholder-shown:shadow-none"
             type="button"
             data-ripple-light="true">                
               Search
             </button>
             <input
                 type="email"
-                class="peer h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-2.5 pr-20 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                class="peer h-full w-full rounded-full border border-blue-gray-200 bg-transparent px-3 py-2.5 pr-20 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                 placeholder=" "
                 required
             />
@@ -35,21 +37,19 @@ const Navbar = () => {
     </div>
 
     <div className='navbar'>
-      <img src={assets.logo} alt="" className='logo' />
       <ul className='nav-menu'>
-        <li onClick={()=>setMenu("home")} className={menu==="home"?"active":""}><Link to='/'>Home</Link></li>
-        <li onClick={()=>setMenu("products")} className={menu==="products"?"active":""}><Link to='/products'>Products</Link></li>
-        <li onClick={()=>setMenu("pages")} className={menu==="pages"?"active":""}>Pages</li>
-        <li onClick={()=>setMenu("blog")} className={menu==="blog"?"active":""}>Blog</li>
-        <li onClick={()=>setMenu("about-us")} className={menu==="about-us"?"active":""}>About Us</li>
-        <li onClick={()=>setMenu("contact-us")} className={menu==="contact-us"?"active":""}>Contact Us</li>
+        <li className={menu === "home"?"active": " hover:text-gray-400 transition duration-300 ease-in-out hover:border-[#00b207]"}><Link to='/' onClick={()=>setMenu("home")} >Home</Link></li>
+        <li className={menu === "products"?"active":" hover:text-gray-400 transition duration-300 ease-in-out hover:border-[#00b207]"}><Link to='/products' onClick={()=>setMenu("products")} >Products</Link></li>
+        <li onClick={()=>setMenu("pages")} className={menu==="pages"?"active":" hover:text-gray-400 transition duration-300 ease-in-out hover:border-[#00b207]"}>Pages</li>
+        <li onClick={()=>setMenu("about-us")} className={menu==="about-us"?"active":" hover:text-gray-400 transition duration-300 ease-in-out hover:border-[#00b207]"}>About Us</li>
+        <li onClick={()=>setMenu("contact-us")} className={menu==="contact-us"?"active":" hover:text-gray-400 transition duration-300 ease-in-out hover:border-[#00b207]"}>Contact Us</li>
       </ul>
-      <div className='nav-icon'>
+      <div className='nav-icon w-20 '>
         <div className='nav-cart-icon'>
           <Link to='/shoppingcart' onClick={()=>setMenu("order")} className={menu==="order"?"active":""}><img src={assets.cart} alt="" /></Link>
           <div className='dot'></div>
         </div>
-        <Link to="/loginsignup"><button><img src={assets.user} alt="" /></button></Link>
+        <Link to="/login"><button><img src={assets.user} alt="" /></button></Link>
 
       </div>
     </div>

@@ -1,13 +1,13 @@
 import React from 'react'; 
 import { Link } from 'react-router-dom';
-import './LoginSignup.css'
+import './Login.css'
 import { assets } from '../../assets/assets'
 
 const LoginSignup = (props) => {
     return (
         <div className='loginsignup'>
             <div className="loginsignup-container">
-                <h1>Sign In</h1>
+                <h1 class="text-3xl font-bold">Sign In</h1>
                 <div className="loginsignup-fields">
                 <input type="email" placeholder='Email Address' />
                 <input type="password" placeholder='Password' />
@@ -18,7 +18,7 @@ const LoginSignup = (props) => {
                     <p>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤForget password</p>
                 </div>
                 <button>Login</button>
-                <p className="loginsignup-login">Don't have account? <Link to="/register"> <span> Register</span> </Link></p>
+                <p className="loginsignup-login">Don't have account? <Link to="/register"> <span class="hover:text-[#00b207]"> Register</span> </Link></p>
             </div>
         </div>
     )

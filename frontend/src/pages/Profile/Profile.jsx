@@ -7,13 +7,13 @@ const Profile = () => {
     <div>
         <div>
         <div className="flex min-h-screen bg-gray-50">
-        <aside className="w-64 p-4 bg-white border-r">
+        <aside className="w-64 pt-8 pl-4 bg-white border-r">
         <nav className="space-y-4">
           <h2 className="text-lg font-bold">Navigation</h2>
           <ul className="space-y-2">
                 <Link to='/profile'>
                     <li>
-                    <a href="#" className="flex items-center p-2 space-x-2 hover:bg-green-100 rounded">
+                    <a href="#" className="flex items-center p-2 pb-4 space-x-2 hover:bg-green-100 rounded">
                         <div className="w-5 h-5" />
                         <span>Dashboard</span>
                     </a>
@@ -94,7 +94,7 @@ const Profile = () => {
                 <div>View</div>
               </div>
             </div>
-            <div className='m-1'>
+            <div className='m-2'>
               <div className=' pb-4 grid grid-cols-5'>
                 <div>#738</div>
                 <div>8 Sep, 2020</div>

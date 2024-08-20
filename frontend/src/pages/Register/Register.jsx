@@ -7,7 +7,7 @@ const Register = (props) => {
     return (
         <div className='register'>
             <div className="register-container">
-                <h1>Create Account</h1>
+                <h1 class="text-3xl font-bold">Create Account</h1>
                 <div className="register-fields">
                 <input type="email" placeholder='Email Address' />
                 <input type="password" placeholder='Password' />
@@ -18,7 +18,7 @@ const Register = (props) => {
                     <p>Accept all terms & Conditions</p>
                 </div>
                 <button>Register</button>
-                <p className="register-createaccount">Already have an account?<Link to="/loginsignup"><span> Login</span></Link></p>
+                <p className="register-createaccount">Already have an account?<Link to="/login"><span class="hover:text-[#00b207]"> Login</span></Link></p>
             </div>
         </div>
     )
