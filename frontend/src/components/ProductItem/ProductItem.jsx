@@ -4,7 +4,7 @@ import { StoreContext } from '../../context/StoreContext'
 const ProductItem = ({id,name,price,description,image}) => {
   
     return (
-    <div className='product-item'>
+    <div className='product-item  duration-300 ease-in-out hover:shadow-2xl cursor-pointer'>
         <div className='product-item-img-container'>
             <img className='product-item-image' src={image} alt="" />
 

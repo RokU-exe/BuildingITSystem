@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import './ProductDisplay.css'
+import './ProductCard.css'
 import { StoreContext } from '../../context/StoreContext'
 import ProductItem from '../ProductItem/ProductItem'
 
@@ -9,8 +9,6 @@ const ProductDisplay = ({category}) => {
 
   return (
     <div className='product-display' id='product-display'>
-        <h2>Product</h2>
-        <h3>Our Featured Products</h3>
         <div className='product-display-list'>
           {product_list.map((item,index)=>{
             if(category==="All" || category===item.category ){
