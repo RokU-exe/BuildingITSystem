@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Products.css'
 import Slider from 'react-slider';
-import ProductDisplay from '../../components/ProductDisplay/ProductDisplay'
+import ProductCard from '../../components/ProductCard/ProductCard'
 
 const MIN = 100;
 const MAX = 1200;
@@ -461,10 +461,19 @@ const Products = () => {
         </div>
       </div>
       <div>
-        <div class="flex items-center justify-between mb-6">
-          <h1 class="text-2xl font-bold">Products</h1>
+        <div class="flex items-center justify-between mb-6">          
+          <form class="max-w-sm mx-auto mr-10">
+            <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Sort by: </label>
+            <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#00b207] focus:border-[#00b207] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#00b207] dark:focus:border-[#00b207]">
+              <option value="latest">Latest</option>
+              <option value="featured">Featured</option>
+              <option value="high-low">Price: High-Low</option>
+              <option value="DE">Price: Low-High</option>
+            </select>
+          </form>
+
         </div>
-          <ProductDisplay category={category} />
+          <ProductCard category={category} />
       </div>
     </div>
 

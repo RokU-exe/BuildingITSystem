@@ -44,12 +44,12 @@ const Navbar = () => {
         <li onClick={()=>setMenu("about-us")} className={menu==="about-us"?"active":" hover:text-gray-400 transition duration-300 ease-in-out hover:border-[#00b207]"}>About Us</li>
         <li onClick={()=>setMenu("contact-us")} className={menu==="contact-us"?"active":" hover:text-gray-400 transition duration-300 ease-in-out hover:border-[#00b207]"}>Contact Us</li>
       </ul>
-      <div className='nav-icon w-28'>
+      <div className='nav-icon w-20 '>
         <div className='nav-cart-icon'>
           <Link to='/shoppingcart' onClick={()=>setMenu("order")} className={menu==="order"?"active":""}><img src={assets.cart} alt="" /></Link>
           <div className='dot'></div>
         </div>
-        <Link to="/loginsignup"><button><img src={assets.user} alt="" /></button></Link>
+        <Link to="/login"><button><img src={assets.user} alt="" /></button></Link>
 
       </div>
     </div>

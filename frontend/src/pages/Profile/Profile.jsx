@@ -94,7 +94,7 @@ const Profile = () => {
                 <div>View</div>
               </div>
             </div>
-            <div className='m-1'>
+            <div className='m-2'>
               <div className=' pb-4 grid grid-cols-5'>
                 <div>#738</div>
                 <div>8 Sep, 2020</div>

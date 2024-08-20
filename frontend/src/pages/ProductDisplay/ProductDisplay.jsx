@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ProductCard from '../../components/ProductCard/ProductCard'
 import { assets } from '../../assets/assets'
 
 
 const ProductDisplay = () => {
+    const [category] = useState("All")
+
     const [isFavorited, setIsFavorited] = React.useState(false);
 
     const [counter, setCounter] = React.useState(1);    
@@ -726,6 +729,7 @@ const ProductDisplay = () => {
         <p class="relative text-xl grid justify-items-center font-bold text-gray-900 sm:text-4xl dark:text-white ">
           Related Products 
         </p>
+        <ProductCard category={category} />
   </section>
   
   )

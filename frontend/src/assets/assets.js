@@ -10,6 +10,7 @@ import icon4 from './Icon-3.png';
 import cart from './Cart.png';
 import user from './user.png';
 import phoneCall from './PhoneCall 1.png';
+import Breadcrumb from './Breadcrumbs.png';
 
 //logo
 import logo from './plant.png';
@@ -68,7 +69,8 @@ export const assets = {
     avatar_comment,
     lettuce,
     spinach,
-    stockcake
+    stockcake,
+    Breadcrumb
 }
 
 export const categories = [

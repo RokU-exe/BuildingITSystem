@@ -2,7 +2,8 @@ import React from 'react'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import Subcribe from './components/Subcribe/Subcribe'
-import LoginSignup from './pages/LoginSignup/LoginSignup'
+import Breadcrumb from './components/Breadcrumbs/Breadcrumbs'
+import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import Home from './pages/Home/Home'
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
@@ -14,14 +15,14 @@ import OrderDetails from './pages/OrderDetails/OrderDetails'
 import Profile from './pages/Profile/Profile'
 import { Route, Routes } from 'react-router-dom'
 
-
 const App = () => {
   return (
     <>
       <Navbar/>
+      <Breadcrumb/>
       <div className='app'>
         <Routes>
-          <Route path='/loginsignup' element={<LoginSignup/>}/>
+          <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/' element={<Home/>} />
           <Route path='/shoppingcart/order' element={<PlaceOrder/>} />
@@ -36,7 +37,6 @@ const App = () => {
       <Subcribe/>
       <Footer/>
     </>
-   
   )
 }
 
