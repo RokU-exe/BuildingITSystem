@@ -29,9 +29,127 @@ if (!supabaseUrl || !supabaseKey) {
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
+// Authentication middleware
+const authMiddleware = async (req, res, next) => {
+  const token = req.headers.authorization?.split(' ')[1];
+  if (!token) {
+    return res.status(401).json({ error: 'No token provided' });
+  }
+
+  try {
+    const { data: { user }, error } = await supabase.auth.getUser(token);
+    if (error) throw error;
+    req.user = user;
+    next();
+  } catch (error) {
+    res.status(401).json({ error: 'Invalid token' });
+  }
+};
+
+// Example of a protected route
+app.get('/protected', authMiddleware, (req, res) => {
+  res.json({ message: 'This is a protected route', user: req.user });
+});
+
 // Test route
 app.get('/', (req, res) => {
   res.send('Backend is running!');
+});
+
+// Sign Up route
+app.post('/auth/signup', async (req, res) => {
+  const { email, password, name } = req.body;
+  try {
+    const { user, error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: {
+          name: name
+        }
+      }
+    });
+    if (error) throw error;
+    res.status(201).json({ user, message: 'Signup successful' });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+// Login route
+app.post('/auth/login', async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+    if (error) throw error;
+    res.status(200).json({ user: data.user, session: data.session, message: 'Login successful' });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+// Logout route
+app.post('/auth/login', async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const { user, error } = await supabase.auth.signInWithPassword({
+      email,
+      password
+    });
+    if (error) throw error;
+    res.status(200).json({ user, message: 'Login successful' });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+// Get user profile
+app.get('/profile', authMiddleware, async (req, res) => {
+  try {
+    const { data, error } = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('id', req.user.id)
+      .single();
+
+    if (error) throw error;
+    res.json(data);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+// Update user profile
+app.put('/profile', authMiddleware, async (req, res) => {
+  const { name, avatar_url } = req.body;
+  try {
+    const { data, error } = await supabase
+      .from('profiles')
+      .update({ name, avatar_url })
+      .eq('id', req.user.id);
+
+    if (error) throw error;
+    res.json(data);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+// Update user password
+app.post('/auth/update-password', async (req, res) => {
+  const { newPassword } = req.body;
+  try {
+    const { user, error } = await supabase.auth.updateUser({
+      password: newPassword
+    });
+    if (error) throw error;
+    res.status(200).json({ message: 'Password updated successfully' });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
 });
 
 // Test Supabase connection
