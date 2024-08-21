@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const { createClient } = require('@supabase/supabase-js');
 const cors = require('cors');
+const axios = require('axios');
 
 dotenv.config();
 
@@ -233,4 +234,25 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
   console.log(`Supabase URL: ${supabaseUrl}`);
   console.log(`Supabase Key: ${supabaseKey ? '********' : 'Not Set'}`);
+});
+
+// AI Chatbox endpoint
+app.post('/api/chat', async (req, res) => {
+  try {
+    const { message } = req.body;
+    // Replace with actual AI API call
+    const aiResponse = await axios.post('https://api.openai.com/v1/chat/completions', {
+      model: "gpt-3.5-turbo",
+      messages: [{ role: "user", content: message }]
+    }, {
+      headers: {
+        'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+        'Content-Type': 'application/json'
+      }
+    });
+    res.json({ message: aiResponse.data.choices[0].message.content });
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ error: 'An error occurred' });
+  }
 });
