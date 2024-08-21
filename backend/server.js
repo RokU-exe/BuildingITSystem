@@ -92,15 +92,11 @@ app.post('/auth/login', async (req, res) => {
 });
 
 // Logout route
-app.post('/auth/login', async (req, res) => {
-  const { email, password } = req.body;
+app.post('/auth/logout', async (req, res) => {
   try {
-    const { user, error } = await supabase.auth.signInWithPassword({
-      email,
-      password
-    });
+    const { error } = await supabase.auth.signOut();
     if (error) throw error;
-    res.status(200).json({ user, message: 'Login successful' });
+    res.status(200).json({ message: 'Logout successful' });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
