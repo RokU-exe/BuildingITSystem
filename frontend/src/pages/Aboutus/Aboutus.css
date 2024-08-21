@@ -1,0 +1,61 @@
+/* src/components/Aboutus.css */
+
+.aboutus {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Common styling for text and image sections */
+.text-image {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.text {
+    flex: 1;
+    padding: 10px;
+    max-width: 600px; /* Controls the maximum width of the text container */
+}
+
+.team-image {
+    flex: 1;
+    height: auto;
+    border-radius: 8px; /* Optional: adds rounded corners */
+    margin: 0 10px;
+}
+
+/* Specific sizes for images */
+.team-image {
+    max-width: 400px; /* Adjust to desired size */
+}
+
+/* Reverse text and image order for specific section */
+.text-image.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    background-color: #35c43a; /* Adjust as needed */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Specific styling for the team section */
+.ourteam {
+    margin-top: 20px;
+}
+
+.ourteam .text {
+    text-align: center;
+}

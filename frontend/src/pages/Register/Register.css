@@ -24,7 +24,7 @@
 .register-fields {
     display: flex;
     flex-direction: column;
-    gap: 29px;
+gap: 29px;
     margin-top: 15px;
 }
 .register-fields input {
