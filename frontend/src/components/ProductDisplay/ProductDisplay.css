@@ -1,0 +1,21 @@
+.product-display{
+    margin-top: 30px;
+}
+
+.product-display h2{
+    color: #1C7820;
+    font-weight: 500;
+    text-align: center;
+}
+
+.product-display h3{
+    text-align: center;
+}
+
+.product-display-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+    margin-top: 30px;
+    gap: 30px;
+    row-gap: 50px;
+}

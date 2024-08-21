@@ -5,7 +5,12 @@ import Subcribe from './components/Subcribe/Subcribe'
 import LoginSignup from './pages/LoginSignup/LoginSignup'
 import Register from './pages/Register/Register'
 import Contactus from './pages/Contactus/Contactus'
-import { Route, Routes} from 'react-router-dom'
+import Home from './pages/Home/Home'
+import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
+import Products from './pages/Products/Products'
+import ProductDisplay from './pages/ProductDisplay/ProductDisplay'
+import ShoppingCart from './pages/ShoppingCart/ShoppingCart'
+import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
   return (
@@ -16,9 +21,13 @@ const App = () => {
           <Route path='/loginsignup' element={<LoginSignup/>}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/contactus' element={<Contactus/>}/>
-        </Routes>
-      </div>
-
+          <Route path='/' element={<Home/>} />
+          <Route path='/shoppingcart/order' element={<PlaceOrder/>} />
+          <Route path='/products' element={<Products/>} />
+          <Route path='/productdisplay' element={<ProductDisplay/>} />
+          <Route path='/shoppingcart' element={<ShoppingCart/>} />
+       </Routes>    
+      </div> 
       <Subcribe/>
       <Footer/>
     </>
