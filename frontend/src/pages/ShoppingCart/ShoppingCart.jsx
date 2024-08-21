@@ -198,7 +198,7 @@ const ShoppingCart = () => {
                                 <p class="font-medium text-xl leading-8 text-black">Total</p>
                                 <p class="font-semibold text-xl leading-8 text-green-600">$485.00</p>
                             </div>
-                            <Link to='./order'><button class="w-full text-center bg-[#00b207] rounded-full py-3 px-6 font-semibold text-lg text-white transition-all duration-500 hover:bg-green-300">Proceed to checkout</button></Link>
+                            <Link to='./order'><button class="w-full text-center bg-[#00b207] rounded-full py-3 px-6 font-semibold text-lg text-white transition-all duration-300 hover:bg-green-300">Proceed to checkout</button></Link>
                         </form>
                     </div>
                 </div>

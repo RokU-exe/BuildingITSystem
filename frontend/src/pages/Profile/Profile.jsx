@@ -13,7 +13,7 @@ const Profile = () => {
           <ul className="space-y-2">
                 <Link to='/profile'>
                     <li>
-                    <a href="#" className="flex items-center p-2 pb-4 space-x-2 hover:bg-green-100 rounded">
+                    <a href="#" className="flex items-center p-2 mb-2 space-x-2 hover:bg-green-100 rounded">
                         <div className="w-5 h-5" />
                         <span>Dashboard</span>
                     </a>
@@ -59,7 +59,7 @@ const Profile = () => {
       {/* customer profile */}
       <main className="flex-1 p-8 space-y-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <div className="flex flex-col items-center p-4 border-2 rounded-lg ">
+            <div className="flex flex-col items-center p-4 pt-20 border-2 rounded-lg ">
                 <div>
                     <div src="/placeholder-user.jpg" alt="Profile Picture" />
                     <div>DP</div>
@@ -67,9 +67,6 @@ const Profile = () => {
                 <div className="text-center">
                     <h3 className="text-xl font-bold">Dohyun Park</h3>
                     <p className="text-sm text-muted-foreground">Customer</p>
-                    <div variant="outline" className="mt-2">
-                        Edit Profile
-                    </div>
                 </div>
             </div>
             <div className="p-4 space-y-4 border-2 rounded-lg">
@@ -87,11 +84,11 @@ const Profile = () => {
           <div>
             <div>
               <div className='m-2 grid grid-cols-5'>
-                <div>Order ID</div>
-                <div>Date</div>
-                <div>Total</div>
-                <div>Status</div>
-                <div>View</div>
+                <div className='text-lg font-semibold'>Order ID</div>
+                <div className='text-lg font-semibold'>Date</div>
+                <div className='text-lg font-semibold'>Total</div>
+                <div className='text-lg font-semibold'>Status</div>
+                <div className='text-lg font-semibold'>View</div>
               </div>
             </div>
             <div className='m-2'>
@@ -100,7 +97,7 @@ const Profile = () => {
                 <div>8 Sep, 2020</div>
                 <div>$135.00 (5 Products)</div>
                 <div>Processing</div>
-                <div className="text-green-600 hover:text-green-400">
+                <div className="text-[#00b207] hover:text-green-300 transition-all duration-200 ease-linear">
                   <Link to='/orderdetails'>View Details</Link>
                 </div>
               </div>
@@ -109,7 +106,7 @@ const Profile = () => {
                 <div>24 May, 2020</div>
                 <div>$25.00 (1 Product)</div>
                 <div>On the way</div>
-                <div className="text-green-600 hover:text-green-400">
+                <div className="text-[#00b207] hover:text-green-300 transition-all duration-200 ease-linear">
                   <Link to='/orderdetails'>View Details</Link>
                 </div>
               </div>
@@ -118,7 +115,7 @@ const Profile = () => {
                 <div>22 Oct, 2020</div>
                 <div>$250.00 (4 Products)</div>
                 <div>Completed</div>
-                <div className=" text-green-600 hover:text-green-400">
+                <div className=" text-[#00b207] hover:text-green-300 transition-all duration-200 ease-linear">
                   <Link to='/orderdetails'>View Details</Link>
                 </div>
               </div>
@@ -127,7 +124,7 @@ const Profile = () => {
                 <div>1 Feb, 2020</div>
                 <div>$35.00 (1 Product)</div>
                 <div>Completed</div>
-                <div className=" text-green-600 hover:text-green-400">
+                <div className=" text-[#00b207] hover:text-green-300 transition-all duration-200 ease-linear">
                   <Link to='/orderdetails'>View Details</Link>
                 </div>
               </div>
@@ -136,7 +133,7 @@ const Profile = () => {
                 <div>21 Sep, 2020</div>
                 <div>$678.00 (13 Products)</div>
                 <div>Completed</div>
-                <div className=" text-green-600 hover:text-green-400">
+                <div className=" text-[#00b207] hover:text-green-300 transition-all duration-200 ease-linear">
                   <Link to='/orderdetails'>View Details</Link>
                 </div>
               </div>
@@ -145,7 +142,7 @@ const Profile = () => {
                 <div>22 Oct, 2020</div>
                 <div>$345.00 (7 Products)</div>
                 <div>Completed</div>
-                <div className=" text-green-600 hover:text-green-400">
+                <div className=" text-[#00b207] hover:text-green-300 transition-all duration-200 ease-linear">
                   <Link to='/orderdetails'>View Details</Link>
                 </div>
               </div>

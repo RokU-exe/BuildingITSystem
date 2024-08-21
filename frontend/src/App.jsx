@@ -5,6 +5,7 @@ import Subcribe from './components/Subcribe/Subcribe'
 import Breadcrumb from './components/Breadcrumbs/Breadcrumbs'
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
+import Contactus from './pages/Contactus/Contactus'
 import Home from './pages/Home/Home'
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
 import Products from './pages/Products/Products'
@@ -24,6 +25,7 @@ const App = () => {
         <Routes>
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
+          <Route path='/contactus' element={<Contactus/>}/>
           <Route path='/' element={<Home/>} />
           <Route path='/shoppingcart/order' element={<PlaceOrder/>} />
           <Route path='/products' element={<Products/>} />
