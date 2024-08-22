@@ -72,10 +72,6 @@ body {
   font-family: Arial, sans-serif; /* Apply Arial font to button */
 }
 
-.contact-form button:hover {
-  background-color: #1b8222;
-}
-
 .map {
   margin-top: 20px;
   width: 100%;
