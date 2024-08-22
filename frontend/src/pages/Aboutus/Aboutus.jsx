@@ -29,32 +29,32 @@ const Aboutus = () => {
         <div className='aboutus'>
             <section className='text-image'>
                 <div className='text'>
-                    <h1>100% Trusted</h1>
-                    <h1>Organic Food Store</h1>
+                    <h1 className='text-3xl font-bold'>100% Trusted</h1>
+                    <h1 className='text-3xl font-bold mb-2'>Organic Food Store</h1>
                     <p>Morbi porttitor ligula in nunc varius sagittis. Proin dui nisi, laoreet </p>
                     <p>ut tempor ac, cursus vitae eros. Cras quis ultricies elit. Proin ac </p>
                     <p>lectus arcu. Maecenas aliquet vel tellus at accumsan. Donec a</p>
                     <p>eros non massa vulputate ornare. Vivamus ornare commodo</p>
                     <p>ante, at commodo felis congue vitae.</p>
                 </div>
-                <img src="https://ucacsa.com/static/assets/img/creditos/habilitacion.png" alt="About Us" className="team-image" />
+                <img className="w-auto" src="https://ucacsa.com/static/assets/img/creditos/habilitacion.png" alt="About Us" />
             </section>
 
             <section className='grey-background'>
     <section className='text-image reverse'>
         <div className='text'>
-            <h1>100% Trusted</h1>
-            <h1>Organic Food Store</h1>
+            <h1 className='text-3xl font-bold'>100% Trusted</h1>
+            <h1 className='text-3xl font-bold mb-2'>Organic Food Store</h1>
             <p>Pellentesque a ante vulputate leo porttitor luctus sed eget eros. Nulla et</p>
             <p>rhoncus neque. Dui non diam eget est luctus tincidunt a a mi. Nulla eu</p> 
             <p>eros consequat tortor tincidunt feugiat.</p>
             <div className="grid">
-                <div><h2>100% Organic food</h2>100% healthy & Fresh food</div>
-                <div><h2>Great Support 24/7</h2>Instant access to Contact</div>
-                <div><h2>Customer Feeback</h2>Our happy customer</div>
-                <div><h2>100% Sucure Payment</h2>We ensure your money is save</div>
-                <div><h2>Free Shipping</h2>Free shipping with discount</div>
-                <div><h2>100% Organic Food</h2>100% healthy & Fresh food</div>
+                <div><h2 className='text-xl font-bold'>100% Organic food</h2>100% healthy & Fresh food</div>
+                <div><h2 className='text-xl font-bold'>Great Support 24/7</h2>Instant access to Contact</div>
+                <div><h2 className='text-xl font-bold'>Customer Feeback</h2>Our happy customer</div>
+                <div><h2 className='text-xl font-bold'>100% Sucure Payment</h2>We ensure your money is save</div>
+                <div><h2 className='text-xl font-bold'>Free Shipping</h2>Free shipping with discount</div>
+                <div><h2 className='text-xl font-bold'>100% Organic Food</h2>100% healthy & Fresh food</div>
             </div>
         </div>
         <img src="https://th.bing.com/th/id/R.b6e19713e68ce041d30afc55ff1f59c9?rik=PJdDLFUdIAD4yg&riu=http%3a%2f%2fwww.hoffmannhayes.com%2fwp-content%2fuploads%2f2017%2f03%2fDaniels-Workday-Backyard-e1490371085974.jpg&ehk=d1MPzRB2FDK9zyx2SX6PyoiZ7RpSvMpFXLkIc47JPvM%3d&risl=&pid=ImgRaw&r=0" alt="About Us" className="team-image"/>
@@ -64,7 +64,7 @@ const Aboutus = () => {
 
             <section className='text-image'>
                 <div className='text'>
-                    <h1>We Delivered, You Enjoy Your Order.</h1>
+                    <h1 className='text-3xl font-bold mb-2'>We Delivered, You Enjoy Your Order.</h1>
 
                     <p>Ut suscipit egestas suscipit. Sed posuere pellentesque nunc,</p>
                     <p>ultrices consectetur velit dapibus eu. Mauris sollicitudin dignissim</p>
@@ -82,7 +82,7 @@ const Aboutus = () => {
             <section className='ourteam'>
                 <div className='text'>
 
-                    <h3>Our Awesome Team</h3>
+                    <h3 className='text-3xl font-bold'>Our Awesome Team</h3>
                     <p>Pellentesque a ante vulputate leo porttitor luctus sed eget eros. Nulla et rhoncus</p>
                     <p>neque. Duis non diam eget est luctus tincidunt a a mi.</p>
                 </div>
