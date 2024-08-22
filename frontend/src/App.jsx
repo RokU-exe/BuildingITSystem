@@ -5,6 +5,7 @@ import Subcribe from './components/Subcribe/Subcribe'
 import Breadcrumb from './components/Breadcrumbs/Breadcrumbs'
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
+import Aboutus from './pages/Aboutus/Aboutus'
 import Contactus from './pages/Contactus/Contactus'
 import Home from './pages/Home/Home'
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
@@ -16,6 +17,7 @@ import OrderDetails from './pages/OrderDetails/OrderDetails'
 import Profile from './pages/Profile/Profile'
 import { Route, Routes } from 'react-router-dom'
 
+
 const App = () => {
   return (
     <>
@@ -26,6 +28,7 @@ const App = () => {
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/contactus' element={<Contactus/>}/>
+          <Route path="/aboutus" element={<Aboutus />} />            
           <Route path='/' element={<Home/>} />
           <Route path='/shoppingcart/order' element={<PlaceOrder/>} />
           <Route path='/products' element={<Products/>} />
