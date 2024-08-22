@@ -6,6 +6,13 @@ const Navbar = () => {
     const [menu, setMenu] = useState("home");
   return (
     <>
+    <div className='grid justify-items-center my-5 mr-20'>
+      <svg className='w-10 mb-2' viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <rect width="30" height="20" fill="#da251d"/>
+        <polygon points="15,4 11.47,14.85 20.71,8.15 9.29,8.15 18.53,14.85" fill="#ff0"/>
+      </svg>
+      <p className='font-sans text-2xl font-bold hover:text-transparent bg-clip-text bg-gradient-to-r from-[#ff0000] to-[#fbff00] transition-all duration-200 ease-linear'>Truong Sa, Hoang Sa belong to Vietnam</p>
+    </div>
     <div className="navbar1">
       <div className="logo">
         <Link to='/'>
@@ -42,9 +49,9 @@ const Navbar = () => {
         <li className={menu === "products"?"active":" hover:text-gray-400 transition duration-300 ease-in-out hover:border-[#00b207]"}><Link to='/products' onClick={()=>setMenu("products")} >Products</Link></li>
         <li onClick={()=>setMenu("pages")} className={menu==="pages"?"active":" hover:text-gray-400 transition duration-300 ease-in-out hover:border-[#00b207]"}>Pages</li>
         <li onClick={()=>setMenu("about-us")} className={menu==="about-us"?"active":" hover:text-gray-400 transition duration-300 ease-in-out hover:border-[#00b207]"}>About Us</li>
-        <li onClick={()=>setMenu("contact-us")} className={menu==="contact-us"?"active":" hover:text-gray-400 transition duration-300 ease-in-out hover:border-[#00b207]"}>Contact Us</li>
-        <Link to="/Contactus"><li onClick={()=>setMenu("contact-us")} className={menu==="contact-us"?"active":""}>Contact Us</li></Link>
+        <li className={menu === "contactus"?"active":" hover:text-gray-400 transition duration-300 ease-in-out hover:border-[#00b207]"}><Link to='/contactus' onClick={()=>setMenu("contactus")} >Contact us</Link></li>
         <Link to='/Aboutus'><li onClick={()=>setMenu("about-us")} className={menu==="about-us"?"active":""}>About Us</li></Link>
+        <li className={menu === "contactus"?"active":" hover:text-gray-400 transition duration-300 ease-in-out hover:border-[#00b207]"}><Link to='/contactus' onClick={()=>setMenu("contactus")} >Contact us</Link></li>
       </ul>
       <div className='nav-icon w-20 '>
         <div className='nav-cart-icon'>

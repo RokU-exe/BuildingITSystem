@@ -7,21 +7,21 @@ const Contactus = () => {
         <div className="contact-us">
             <div className="contact-boxes">
                 
-                <div className="white-box"> <h1>Address</h1>2715 Ash Dr. San Jose, South Dakota 83574</div>
-                <div className="white-box"><h1>Phone number</h1>(123) 456-7890
+                <div className="white-box font-sans text-base font-light"> <h1 className='font-sans text-2xl font-bold'>Address</h1>702 Nguyen Van Linh, Tan Hung, District 7, Ho Chi Minh City, Vietnam</div>
+                <div className="white-box font-sans text-base font-light"><h1 className='font-sans text-2xl font-bold'>Hotline</h1>(123) 456-7890
                 <p>(659) 535-7268</p></div>
-                <div className="white-box"><h1>Email</h1>Proxy@gmail.com
-                <p>Help.proxy@gmail.com</p></div> 
+                <div className="white-box font-sans text-base font-light"><h1 className='font-sans text-2xl font-bold'>Email</h1>ingrediet@gmail.com
+                <p>help_ingrediet.proxy@gmail.com</p></div> 
                 <div className="white-box large-box">
-                    <h2>Just Say Hello!</h2>
-                    <p>Do you fancy saying hi to me or you want to started with your</p>
-                    <p>project and you need my help? Feel free to contact me</p>
+                    <h2 className='font-sans text-2xl font-bold mb-2'>Just Say Hello!</h2>
+                    <p className='font-sans text-base font-light mb-2'>Do you fancy saying hi to me or you want to started with your</p>
+                    <p className='font-sans text-base font-light mb-4'>project and you need my help? Feel free to contact me</p>
                     <div className="contact-form">
-                        <input type="text" placeholder="Template Cookie" />
-                        <input type="email" placeholder="Email Address" />
-                        <input type="text" placeholder="Title" />
-                        <input type="text" placeholder="Subjects" />
-                        <button>Send Message</button>
+                        <input className='focus:ring-transparent focus:border-2 focus:border-[#00b207] focus:outline-0' type="text" placeholder="Template Cookie" />
+                        <input className='focus:ring-transparent focus:border-2 focus:border-[#00b207] focus:outline-0' type="email" placeholder="Email Address" />
+                        <input className='focus:ring-transparent focus:border-2 focus:border-[#00b207] focus:outline-0' type="text" placeholder="Title" />
+                        <input className='focus:ring-transparent focus:border-2 focus:border-[#00b207] focus:outline-0' type="text" placeholder="Subjects" />
+                        <button className='bg-[#00b207] hover:shadow-lg hover:shadow-green-500/40  text-white transition-all duration-200 ease-linear font-sans text-xs font-bold'>Send Message</button>
                     </div>
                 </div>
             </div>
