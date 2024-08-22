@@ -50,6 +50,8 @@ const Navbar = () => {
         <li onClick={()=>setMenu("pages")} className={menu==="pages"?"active":" hover:text-gray-400 transition duration-300 ease-in-out hover:border-[#00b207]"}>Pages</li>
         <li onClick={()=>setMenu("about-us")} className={menu==="about-us"?"active":" hover:text-gray-400 transition duration-300 ease-in-out hover:border-[#00b207]"}>About Us</li>
         <li className={menu === "contactus"?"active":" hover:text-gray-400 transition duration-300 ease-in-out hover:border-[#00b207]"}><Link to='/contactus' onClick={()=>setMenu("contactus")} >Contact us</Link></li>
+        <Link to='/Aboutus'><li onClick={()=>setMenu("about-us")} className={menu==="about-us"?"active":""}>About Us</li></Link>
+        <li className={menu === "contactus"?"active":" hover:text-gray-400 transition duration-300 ease-in-out hover:border-[#00b207]"}><Link to='/contactus' onClick={()=>setMenu("contactus")} >Contact us</Link></li>
       </ul>
       <div className='nav-icon w-20 '>
         <div className='nav-cart-icon'>
