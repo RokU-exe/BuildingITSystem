@@ -46,7 +46,6 @@ h1{
 }
 
 .team-image {
-    flex: 1;
     height: auto;
     border-radius: 8px; /* Optional: adds rounded corners */
     margin: 0 10px;
