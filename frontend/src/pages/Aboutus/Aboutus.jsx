@@ -24,6 +24,7 @@ const Aboutus = () => {
         setCurrentIndex((prevIndex) => (prevIndex === teamMembers.length - 4 ? 0 : prevIndex + 1));
     };
     
+
     return (
         <div className='aboutus'>
             <section className='text-image'>
@@ -60,9 +61,11 @@ const Aboutus = () => {
     </section>
 </section>
 
+
             <section className='text-image'>
                 <div className='text'>
                     <h1>We Delivered, You Enjoy Your Order.</h1>
+
                     <p>Ut suscipit egestas suscipit. Sed posuere pellentesque nunc,</p>
                     <p>ultrices consectetur velit dapibus eu. Mauris sollicitudin dignissim</p>
                     <p>diam, ac mattis eros accumsan rhoncus. Curabitur auctor</p>
@@ -78,6 +81,7 @@ const Aboutus = () => {
 
             <section className='ourteam'>
                 <div className='text'>
+
                     <h3>Our Awesome Team</h3>
                     <p>Pellentesque a ante vulputate leo porttitor luctus sed eget eros. Nulla et rhoncus</p>
                     <p>neque. Duis non diam eget est luctus tincidunt a a mi.</p>
@@ -98,3 +102,4 @@ const Aboutus = () => {
 };
 
 export default Aboutus;
+
