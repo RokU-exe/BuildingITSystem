@@ -2,7 +2,10 @@ const express = require('express');
 const dotenv = require('dotenv');
 const { createClient } = require('@supabase/supabase-js');
 const cors = require('cors');
+<<<<<<< HEAD
 const axios = require('axios');
+=======
+>>>>>>> 62734a85 (added backend code to connect supabase)
 
 dotenv.config();
 
@@ -234,6 +237,7 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
   console.log(`Supabase URL: ${supabaseUrl}`);
   console.log(`Supabase Key: ${supabaseKey ? '********' : 'Not Set'}`);
+<<<<<<< HEAD
 });
 
 // AI Chatbox endpoint
@@ -255,4 +259,6 @@ app.post('/api/chat', async (req, res) => {
     console.error('Error:', error);
     res.status(500).json({ error: 'An error occurred' });
   }
+=======
+>>>>>>> 62734a85 (added backend code to connect supabase)
 });
