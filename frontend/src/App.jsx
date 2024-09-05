@@ -15,7 +15,7 @@ import OrderHistory from './pages/OrderHistory/OrderHistory'
 import OrderDetails from './pages/OrderDetails/OrderDetails'
 import Profile from './pages/Profile/Profile'
 import { Route, Routes } from 'react-router-dom'
-import AIChatbox from './components/AIChatbox'
+import AIChatbox from './components/AIChatbox/AIChatbox.jsx'
 
 const App = () => {
   return (

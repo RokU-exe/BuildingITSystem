@@ -3,16 +3,25 @@ const dotenv = require('dotenv');
 const { createClient } = require('@supabase/supabase-js');
 const cors = require('cors');
 const axios = require('axios');
-
+const rateLimit = require('express-rate-limit');
 
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 5050;
 
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+// Rate limiter
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100 // limit each IP to 100 requests per windowMs
+});
+
+// Apply rate limiter to all requests
+app.use(limiter);
 
 // Logging middleware
 app.use((req, res, next) => {
@@ -155,9 +164,9 @@ app.get('/test-db', async (req, res) => {
   console.log('Attempting to connect to Supabase...');
   try {
     const { data, error } = await supabase.from('test').select('*').limit(1);
-    
+
     if (error) throw error;
-    
+
     console.log('Supabase connection successful');
     res.json({ message: 'Supabase connection successful', data });
   } catch (error) {
@@ -174,9 +183,9 @@ app.post('/test-insert', async (req, res) => {
     const { data, error } = await supabase
       .from('test')
       .insert([{ name, description }]);
-    
+
     if (error) throw error;
-    
+
     console.log('Insert successful');
     res.json({ message: 'Insert successful', data });
   } catch (error) {
@@ -194,9 +203,9 @@ app.put('/test-update/:id', async (req, res) => {
       .from('test')
       .update({ description })
       .eq('id', req.params.id);
-    
+
     if (error) throw error;
-    
+
     console.log('Update successful');
     res.json({ message: 'Update successful', data });
   } catch (error) {
@@ -213,9 +222,9 @@ app.delete('/test-delete/:id', async (req, res) => {
       .from('test')
       .delete()
       .eq('id', req.params.id);
-    
+
     if (error) throw error;
-    
+
     console.log('Delete successful');
     res.json({ message: 'Delete successful', data });
   } catch (error) {
@@ -230,19 +239,13 @@ app.use((err, req, res, next) => {
   res.status(500).send('Something broke!');
 });
 
-// Start server
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-  console.log(`Supabase URL: ${supabaseUrl}`);
-  console.log(`Supabase Key: ${supabaseKey ? '********' : 'Not Set'}`);
-});
-
 // AI Chatbox endpoint
 app.post('/api/chat', async (req, res) => {
+  console.log('Received chat request:', req.body);
   try {
     const { message } = req.body;
-    // Replace with actual AI API call
-    const aiResponse = await axios.post('https://api.openai.com/v1/chat/completions', {
+    console.log('Sending request to OpenAI');
+    const response = await axios.post('https://api.openai.com/v1/chat/completions', {
       model: "gpt-3.5-turbo",
       messages: [{ role: "user", content: message }]
     }, {
@@ -251,9 +254,17 @@ app.post('/api/chat', async (req, res) => {
         'Content-Type': 'application/json'
       }
     });
-    res.json({ message: aiResponse.data.choices[0].message.content });
+    console.log('Received response from OpenAI:', response.data);
+    res.json({ message: response.data.choices[0].message.content });
   } catch (error) {
-    console.error('Error:', error);
-    res.status(500).json({ error: 'An error occurred' });
+    console.error('Error:', error.response ? error.response.data : error.message);
+    res.status(500).json({ error: 'An error occurred', details: error.response ? error.response.data : error.message });
   }
+});
+
+// Start server
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+  console.log(`Supabase URL: ${supabaseUrl}`);
+  console.log(`Supabase Key: ${supabaseKey ? '********' : 'Not Set'}`);
 });
