@@ -1,12 +1,15 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
+const authRoutes = require('./authRoutes');
 
 const app = express();
 const port = process.env.PORT || 8000;
 
 app.use(cors());
 app.use(express.json());
+
+app.use('/auth', authRoutes);
 
 app.get('/', (req, res) => {
     res.send('Hello from the backend!');
