@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './Register.css'
 import { assets } from '../../assets/assets'
@@ -9,9 +9,9 @@ const Register = (props) => {
             <div className="register-container">
                 <h1 class="text-3xl font-bold">Create Account</h1>
                 <div className="register-fields">
-                <input className="focus:ring-transparent focus:border-2 focus:border-[#00b207] focus:outline-0" type="email" placeholder='Email Address' />
-                <input className="focus:ring-transparent focus:border-2 focus:border-[#00b207] focus:outline-0" type="password" placeholder='Password' />
-                <input className="focus:ring-transparent focus:border-2 focus:border-[#00b207] focus:outline-0"type="password" placeholder='Confirm Password' />
+                    <input className="focus:ring-transparent focus:border-2 focus:border-[#00b207] focus:outline-0" type="email" placeholder='Email Address' />
+                    <input className="focus:ring-transparent focus:border-2 focus:border-[#00b207] focus:outline-0" type="password" placeholder='Password' />
+                    <input className="focus:ring-transparent focus:border-2 focus:border-[#00b207] focus:outline-0"type="password" placeholder='Confirm Password' />
                 </div>
                 <div className="register-agree">
                     <input className="text-[#00b207] focus:ring-transparent focus:border-2 focus:border-[#00b207] focus:outline-0" type="checkbox" name='' id='acceptterm' />
