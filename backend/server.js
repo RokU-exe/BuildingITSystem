@@ -63,22 +63,32 @@ app.post('/register', async (req, res) => {
 app.post('/login', async (req, res) => {
     const { email, password } = req.body;
     try {
+        console.log('Attempting to log in user:', email);
         const { data, error } = await supabase
             .from('users')
             .select()
             .eq('email', email)
-            .eq('password', password)
             .single();
 
-        if (error) throw error;
+        if (error) {
+            console.error('Supabase error:', error);
+            // If the error is because no rows were returned, it means the user doesn't exist
+            if (error.code === 'PGRST116') {
+                return res.status(401).json({ message: 'Invalid credentials' });
+            }
+            throw error;
+        }
 
-        if (data) {
-            res.status(200).json({ message: 'Login successful', user: data });
+        if (data && data.password === password) {
+            console.log('Login successful for user:', email);
+            res.status(200).json({ message: 'Login successful', user: { id: data.id, email: data.email } });
         } else {
+            console.log('Invalid credentials for user:', email);
             res.status(401).json({ message: 'Invalid credentials' });
         }
     } catch (error) {
-        res.status(400).json({ error: error.message });
+        console.error('Server error:', error);
+        res.status(500).json({ error: 'An unexpected error occurred' });
     }
 });
 
