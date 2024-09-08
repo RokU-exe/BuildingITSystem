@@ -17,7 +17,6 @@ const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY
 app.get('/', (req, res) => {
     console.log('Received request:', req.method, req.url, req.headers);
     res.status(200).json({
-        text: "Hello bro"
     });
 });
 
