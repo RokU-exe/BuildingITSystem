@@ -24,16 +24,38 @@ app.get('/', (req, res) => {
 // User registration
 app.post('/register', async (req, res) => {
     const { email, password } = req.body;
+    console.log('Received registration request for:', email);
+
     try {
         const { data, error } = await supabase
             .from('users')
-            .insert([{ email, password }]);
+            .insert([{ email, password }])
+            .select();  // Add this to return the inserted row
 
-        if (error) throw error;
+        console.log('Supabase response:', { data, error });
 
-        res.status(201).json({ message: 'User registered successfully', user: data[0] });
+        if (error) {
+            console.error('Supabase error:', error);
+            return res.status(400).json({ error: error.message });
+        }
+
+        if (!data || data.length === 0) {
+            console.log('No data returned from insert operation');
+            return res.status(200).json({
+                message: 'User registered successfully, but no data returned',
+                user: { email }
+            });
+        }
+
+        console.log('User registered successfully:', data[0]);
+        res.status(201).json({
+            message: 'User registered successfully',
+            user: data[0]
+        });
+
     } catch (error) {
-        res.status(400).json({ error: error.message });
+        console.error('Server error:', error);
+        res.status(500).json({ error: 'Internal server error' });
     }
 });
 
