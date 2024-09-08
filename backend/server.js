@@ -1,26 +1,20 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
-const authRoutes = require('./authRoutes');
 
 const app = express();
-const port = process.env.PORT || 8000;
-
-const corsOptions = {
-    origin: 'http://localhost:5173',
-    optionsSuccessStatus: 200
-};
-app.use(cors(corsOptions));
+const PORT = process.env.PORT || 8000;
 
 app.use(cors());
 app.use(express.json());
 
-app.use('/auth', authRoutes);
-
 app.get('/', (req, res) => {
-    res.send('Hello from the backend!');
+    console.log('Received request:', req.method, req.url, req.headers);
+    res.status(200).json({
+        text: "Hello bro"
+    });
 });
 
-app.listen(port, () => {
-    console.log(`Server is running on port: ${port}`);
+app.listen(PORT, () => {
+    console.log(`Server is running on port: ${PORT}`);
 });
