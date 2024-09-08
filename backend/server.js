@@ -36,7 +36,9 @@ app.post('/register', async (req, res) => {
 
         if (error) {
             console.error('Supabase error:', error);
-            return res.status(400).json({ error: error.message });
+            return res.status(400).json({
+                message: "User email already exist!"
+            });
         }
 
         if (!data || data.length === 0) {
