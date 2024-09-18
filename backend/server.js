@@ -13,11 +13,38 @@ app.use(express.json());
 // Supabase client
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
 
+// Enhanced error handling middleware
+app.use((err, req, res, next) => {
+    console.error('Error details:', err);
+    res.status(500).json({
+        message: 'An unexpected error occurred',
+        error: err.message,
+        stack: process.env.NODE_ENV === 'production' ? '🥞' : err.stack
+    });
+});
+
 // Routes
 app.get('/', (req, res) => {
     console.log('Received request:', req.method, req.url, req.headers);
     res.status(200).json({
+        message: "Server is running"
     });
+});
+
+// Test Supabase connection
+app.get('/test-connection', async (req, res, next) => {
+    try {
+        const { data, error } = await supabase.from('users').select('count').limit(1);
+        if (error) throw error;
+        res.json({
+            message: 'Connection successful',
+            data: data,
+            supabaseUrl: process.env.SUPABASE_URL,
+            timestamp: new Date().toISOString()
+        });
+    } catch (error) {
+        next(error);
+    }
 });
 
 // User registration
