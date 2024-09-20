@@ -44,7 +44,7 @@ IngreDiet is an e-commerce platform designed to promote healthy eating habits by
 2.  **Switch to the release branch:** `git checkout release/v1.0.0`
 3.  **Install dependencies:** `npm install` (for both frontend and backend)
 4.  **Start the development server:** `npm run dev` (for both frontend and backend)
-5.  **Access the application in your browser:** `http://localhost:3000` (frontend) and `http://localhost:5000` (backend)
+5.  **Access the application in your browser:** `http://localhost:5173` (frontend) and `http://localhost:8000` (backend)
 
 **Note:** Make sure you have Node.js and npm installed on your machine. You'll also need to set up your Supabase project and configure the environment variables accordingly.
 
